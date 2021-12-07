@@ -2,7 +2,112 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@section Links {
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700" rel="stylesheet" type="text/css">
+}
+
+@section Style {
+    <style>
+        .focusedInput {
+            border-color: rgba(82,168,236,.8);
+            outline: 0;
+            outline: thin dotted \9;
+            -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+            box-shadow: 0 0 8px rgba(82,168,236,.6) !important;
+        }
+        body {
+            background-color: #000000;
+        }
+        .form-inline{
+            text-align: center;
+        }
+        .col-xs-1{
+            margin-right: 8px;
+            margin-top: 44px;
+        }
+        #small {
+            margin-left: 2px;
+        }
+        h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            font-family: Georgia;
+        }
+        .btn {
+            font-family: Georgia;
+            font-size: 22px
+        }
+        input {
+            text-align: right;
+            font-family: cabin sketch;
+        }
+    </style>
+}
+
+<h1 class="text-center text-primary">Calculate!</h1>
+  <div class="container">
+    <div class="row">
+      <form class="form-group-lg form-inline" onsubmit="return false">
+        <input type="text" id="calcinput" class="focusedInput form-control">
+        <button type="submit" class="btn btn-warning btn-lg">Clear</button>
+      </form>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-1 col-xs-offset-4">
+        <button class="btn btn-lg btn-primary" type="button">7</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">8</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">9</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">+</button>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col-xs-1 col-xs-offset-4">
+        <button class="btn btn-lg btn-primary" type="button">4</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">5</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">6</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button" id="small">-</button>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col-xs-1 col-xs-offset-4">
+        <button class="btn btn-lg btn-primary" type="button">1</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">2</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button">3</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button" id="small">*</button>
+      </div>
+    </div> <!--row-->
+    <div class="row"> <!--row-->
+      <div class="col-xs-1 col-xs-offset-4">
+        <button class="btn btn-lg btn-primary" type="button">0</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button" id="small">.</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="submit" id="submit">=</button>
+      </div>
+      <div class="col-xs-1">
+        <button class="btn btn-lg btn-primary" type="button" id="small">/</button>
+      </div>
+    </div>
+  </div>
