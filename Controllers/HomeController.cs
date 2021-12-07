@@ -18,9 +18,9 @@ namespace Calculator.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string val)
         {
-            return View();
+            return View((object)val);
         }
 
         public IActionResult Privacy()
